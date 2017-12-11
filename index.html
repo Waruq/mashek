@@ -12,7 +12,8 @@
     <!-- Mobile specific metas
 		============================================ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- jquery js -->
+    <script src="js/jquery.min.js"></script>
     <!-- Google web fonts
 		============================================ -->
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -78,15 +79,15 @@
                 <!-- / END LOGO -->
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#home" class="smoothScroll">Home</a></li>
-                        <li> <a href="#about" class="smoothScroll"> About</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li> <a href="#about"> About</a></li>
                         <!-- <li> <a href="#causes" class="smoothScroll"> Causes</a></li> -->
-                        <li> <a href="#team" class="smoothScroll"> Team</a></li>
+                        <li> <a href="#team"> Team</a></li>
                         <!-- <li> <a href="#services" class="smoothScroll"> Services</a></li> -->
-                        <li> <a href="#fn-success" class="smoothScroll"> Success</a></li>
-                        <li> <a href="#gallery" class="smoothScroll"> Gallery</a></li>
+                        <li> <a href="#fn-success"> Success</a></li>
+                        <li> <a href="#gallery"> Gallery</a></li>
                         <!-- <li> <a href="#testimonials" class="smoothScroll"> Testimonials</a></li> -->
-                        <li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+                        <li> <a href="#contact"> Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -680,8 +681,6 @@
     <!-- / END FOOTER SECTION -->
 
     <!-- JS -->
-    <!-- jquery js -->
-    <script src="js/jquery.min.js"></script>
     <!-- smoothscroll js -->
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <!-- Google map -->
@@ -704,11 +703,27 @@
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <!-- wow js -->
     <script src="js/wow.min.js"></script>
+
     <script>
         new WOW().init();
     </script>
     <!-- Main js -->
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', 'a[href="#contact"],a[href="#team"],a[href="#about"],a[href="#home"],a[href="#fn-success"],a[href="#gallery"]', function(e) {
+                var $anchor = $(this);
+                $('html, body').animate({
+                    scrollTop: $($anchor.attr('href')).offset().top,
+                    specialEasing: {
+                        width: "linear",
+                        height: "easeOutBounce"
+                    }
+                }, 1500);
+                e.preventDefault();
+            });
+        });
+    </script>
 </body>
 
 </html>

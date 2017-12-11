@@ -30,7 +30,7 @@ Author: Dot Themes
     });
 
 
-   	$("a[data-gal^='prettyPhoto']").prettyPhoto(); 
+    $("a[data-gal^='prettyPhoto']").prettyPhoto();
 
 
     $(document).ready(function() {
