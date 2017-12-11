@@ -1,0 +1,140 @@
+/* Extra small devices (phones, less than 768px) 
+=========================================================*/
+@media (max-width: 766px) {
+    /*CAROUSEL*/    
+    #fn-home-carousel .controls li {
+        padding: 30px 10px;
+    }
+    #fn-home-carousel .controls li span {
+        display: none;
+    }
+    #fn-home-carousel .carousel-caption {
+        margin-top: -65px;
+    }
+    #fn-home-carousel .carousel-caption h1 {
+        font-size: 22px;
+        line-height: 35px;
+        letter-spacing: 0px;
+        margin-bottom: 0;
+    }
+    #fn-home-carousel .carousel-caption p {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    #fn-home-carousel .carousel-caption .btn {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
+	#fn-home-carousel > .item-prev {
+    top: 65%;
+	}
+	#fn-home-carousel > .item-next {
+    top: 65%;
+	}
+	/* TESTIMONIAL SECTION*/	  
+	.feedback-box .client-info {
+		float: left;
+		margin-left: 0;
+	}
+	/* DONATE BUTTON PROMO  */  
+	.fn-donate-button {
+	margin-bottom: 25px;
+	}
+	/* TEAM MEMBERS SECTION */  
+	.social-profiles{margin-bottom: 25px;}
+	/* SUCCESS SECTION */
+	#fn-success {
+        background-position: center top !important;
+    }
+}
+
+/* Small devices (tablets, 768px and up) 
+=========================================================*/
+@media (min-width: 768px) and (max-width: 991px) {
+	/* NAVBAR */
+	.nav > li > a {
+		padding: 10px 13px;
+		}
+	.fn-donate-btn {
+		margin-top: 30px;
+		padding: 12px 15px;
+		}
+	/*home-carousel*/
+    
+    #fn-home-carousel .controls li {
+        padding: 30px 10px;
+    }
+    #fn-home-carousel .carousel-caption {
+        margin-top: -142px;
+    }
+    #fn-home-carousel .carousel-caption h1 {
+        font-size: 60px;
+        line-height: 44px;
+        letter-spacing: -3px;
+        margin-bottom: 30px;
+    }
+	/* DONATE BUTTON PROMO  */
+	.fn-donate-button {
+	margin-bottom: 25px;
+	}
+	/* TEAM MEMBERS SECTION */
+	.social-profiles{margin-bottom: 50px;}	
+	/* SUCCESS SECTION */
+    #fn-success {
+        background-position: center top !important;
+    }
+}
+
+/* Landscape Mobile (min-width: 480px and max-width: 767px)
+=========================================================*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* === HOME CAROUSEL === */
+    
+    #fn-home-carousel .controls li {
+        padding: 30px 10px;
+    }
+    #fn-home-carousel .controls li span {
+        font-size: 14px;
+        display: block;
+    }
+    #fn-home-carousel .carousel-caption {
+        margin-top: -95px;
+    }
+    #fn-home-carousel .carousel-caption h1 {
+        font-size: 33px;
+        line-height: 56px;
+    }
+    #fn-home-carousel .carousel-caption p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Wide Mobile Layout: 480px
+=========================================================*/
+@media only screen and (max-width: 480px) {
+	/* GALLERY SECTION */
+    #gallery .gallery-filter {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 12px;
+    }
+    #gallery .gallery-filter > li a {
+        display: block;
+        padding: 7px 15px;
+        margin: 5px 2px;
+    }
+    #gallery .gallery-item {
+        width: 48.9%;
+        padding: 8px;
+    }
+    #gallery .gallery-item .gallery-item-inner .gallery-info .preview {
+        width: 28px;
+        height: 24px;
+        line-height: 24px;
+        margin: 9px auto;
+    }
+    #gallery .gallery-item .gallery-item-inner .gallery-info {
+        padding: 7px 0 0;
+    }
+}
