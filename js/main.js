@@ -48,7 +48,7 @@ Author: Dot Themes
         google.maps.event.addDomListener(window, 'load', init);
 
         function init() {
-            var myLatLng = new google.maps.LatLng(40.70968790739889, -74.06913757324219);
+            var myLatLng = new google.maps.LatLng(33.727817, 75.150122);
 
             var mapOptions = {
                 zoom: 15,
