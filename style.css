@@ -1191,3 +1191,65 @@ ul.link-list li {
     font-size: medium;
     font-weight: bold;
 }
+
+.square {
+    height: 197px;
+    width: 170px;
+    margin-top: -15px;
+}
+
+.cube {
+    height: 100px;
+    width: 150px;
+    border: 1px solid black
+}
+
+.logo {
+    width: 90px;
+    height: 48px;
+    margin-left: 5px;
+}
+
+@media screen and (min-width:1000px) {
+    #mem5 {
+        margin-left: 155px;
+    }
+    #mem1,
+    #mem3 {
+        margin-top: 47px;
+    }
+    #sponsor {
+        margin-left: 50px;
+    }
+    #h4sponsor {
+        margin-left: 145px;
+        display: block;
+    }
+    #donate {
+        width: 125%
+    }
+    .h4donate {
+        display: inline-block
+    }
+    .mg {
+        margin-left: 55px;
+    }
+    #about {
+        height: 600px;
+    }
+    #abouttagp {
+        margin-top: 47px;
+    }
+}
+
+@media screen and (max-width:980px) and (min-width:800px) {
+    .subfoot {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:760px) {
+    #home {
+        margin-top: 50px
+    }
+}

@@ -141,3 +141,48 @@ Author: Dot Themes
     });
 
 })(jQuery);
+
+$.fn.serializeObject = function() {
+    "use strict";
+    var a = {},
+        b = function(b, c) {
+            var d = a[c.name];
+            "undefined" != typeof d && d !== null ? $.isArray(d) ? d.push(c.value) : a[c.name] = [d, c.value] : a[c.name] = c.value
+        };
+    return $.each(this.serializeArray(), b), a
+};
+$(document).on('click', 'a[href="#contact"],a[href="#team"],a[href="#about"],a[href="#home"],a[href="#fn-success"],a[href="#gallery"]', function(e) {
+    var $anchor = $(this);
+    $('html, body').animate({
+        scrollTop: $($anchor.attr('href')).offset().top,
+        specialEasing: {
+            width: "linear ",
+            height: "easeOutBounce "
+        }
+    }, 1500);
+    e.preventDefault();
+});
+
+$('#contactus').submit(function(e) {
+    $('#loader').removeAttr('style');
+    var url = "https://script.google.com/macros/s/AKfycbx_U0gkMX2myfPYpJ-qVGY1pjxujHw5QgDHHB4AFvL6xhqsdPdU/exec";
+    e.preventDefault();
+    $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        crossOrigin: true,
+        data: $('#contactus').serializeObject(),
+        success: function(result) {
+            $('#loader').css('display', 'none');
+            document.getElementById('contactus').reset();
+            swal("Thanks for contacting us", "We will get back to you soon", "success");
+        },
+        error: function(result) {
+            $('#loader').css('display', 'none');
+            swal("Sorry something went wrong ", "Please try again", "error");
+        }
+    });
+
+
+});

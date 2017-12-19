@@ -44,7 +44,7 @@
     <!-- main CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/loader.css">
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
@@ -57,77 +57,16 @@
 		============================================ -->
     <script src="js/modernizr.js"></script>
 
+    <!-- sweet alert
+		============================================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-        .square {
-            height: 197px;
-            width: 170px;
-            margin-top: -15px;
-        }
-        
-        .cube {
-            height: 100px;
-            width: 150px;
-            border: 1px solid black
-        }
-        
-        .logo {
-            width: 90px;
-            height: 48px;
-            /* width: 32%;
-            margin-top: -4px;*/
-            margin-left: 5px;
-        }
-        
-        @media screen and (min-width:1000px) {
-            #mem5 {
-                margin-left: 155px;
-            }
-            #mem1,
-            #mem3 {
-                margin-top: 47px;
-            }
-            #sponsor {
-                margin-left: 50px;
-            }
-            #h4sponsor {
-                margin-left: 145px;
-                display: block;
-            }
-            #donate {
-                width: 125%
-            }
-            .h4donate {
-                display: inline-block
-            }
-            .mg {
-                margin-left: 55px;
-            }
-            #about {
-                height: 600px;
-            }
-            #abouttagp {
-                margin-top: 47px;
-            }
-        }
-        
-        @media screen and (max-width:980px) and (min-width:800px) {
-            .subfoot {
-                text-align: center;
-            }
-        }
-        
-        @media screen and (max-width:760px) {
-            #home {
-                margin-top: 50px
-            }
-        }
-    </style>
+
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -183,7 +122,7 @@
                     <img src="images/slider/slide-2.jpg" alt="Second slide" class="img-responsive">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInDown delay-1">We Need<span> Your </span>Help</h1>
-                        <p class="animated fadeInDown delay-3">Together we can improve their lives So let's do itt</p>
+                        <p class="animated fadeInDown delay-3">Together we can improve their lives So let's do it</p>
                         <!-- <a class="btn animated fadeInUp delay-4" href="#">Learn More</a> -->
                     </div>
                 </div>
@@ -692,16 +631,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 centered">
-                    <form action="sendemail.php" id="contactus" method="post" class="form">
+                    <form action="#" id="contactus" method="post" class="form">
                         <div class="row">
                             <div class="col-xs-6 col-md-6 form-group">
-                                <input class="form-control" id="name" name="cf_name" placeholder="Name" type="text" required />
+                                <input class="form-control" id="name" name="Name" placeholder="Name" type="text" required />
                             </div>
                             <div class="col-xs-6 col-md-6 form-group">
-                                <input class="form-control" id="email" name="cf_email" placeholder="Email" type="email" required />
+                                <input class="form-control" id="email" name="Email" placeholder="Email" type="email" required />
                             </div>
                         </div>
-                        <textarea class="form-control" id="message" name="cf_message" placeholder="Message" rows="5"></textarea>
+                        <textarea class="form-control" id="message" name="Message" placeholder="Message" rows="5" required></textarea>
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
                                 <button class="btn btn btn-lg" type="submit">Send Message</button>
@@ -793,6 +732,11 @@
             </div>
         </div>
     </section>
+    <div id="loader" class="cssloader" style="display:none;">
+        <div class="sh1"></div>
+        <div class="sh2"></div>
+        <h4 class="lt">Sending</h4>
+    </div>
     <!-- / END FOOTER SECTION -->
 
     <!-- JS -->
@@ -818,27 +762,15 @@
     <script type="text/javascript " src="js/owl.carousel.min.js "></script>
     <!-- wow js -->
     <script src="js/wow.min.js "></script>
-
+    <!-- swwt alert js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script>
         new WOW().init();
     </script>
     <!-- Main js -->
     <script type="text/javascript " src="js/main.js "></script>
-    <script>
-        $(document).ready(function() {
-            $(document).on('click', 'a[href="#contact"],a[href="#team"],a[href="#about"],a[href="#home"],a[href="#fn-success"],a[href="#gallery"]', function(e) {
-                var $anchor = $(this);
-                $('html, body').animate({
-                    scrollTop: $($anchor.attr('href')).offset().top,
-                    specialEasing: {
-                        width: "linear ",
-                        height: "easeOutBounce "
-                    }
-                }, 1500);
-                e.preventDefault();
-            });
-        });
-    </script>
+
 </body>
 
 </html>
