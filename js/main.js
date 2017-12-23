@@ -165,7 +165,7 @@ $(document).on('click', 'a[href="#contact"],a[href="#team"],a[href="#about"],a[h
 
 $('#contactus').submit(function(e) {
     $('#loader').removeAttr('style');
-    var url = "https://script.google.com/macros/s/AKfycbx_U0gkMX2myfPYpJ-qVGY1pjxujHw5QgDHHB4AFvL6xhqsdPdU/exec";
+    var url = "https://script.google.com/macros/s/AKfycbzdy_dRn7s67kY_lAwrbZqnTjiRG91tssB4QbIELvedtPjw-GQ/exec"
     e.preventDefault();
     $.ajax({
         url: url,
